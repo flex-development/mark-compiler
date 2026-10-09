@@ -1,6 +1,6 @@
 /**
  * @file Package Entry Point
- * @module fsm-compiler
+ * @module mark-compiler
  */
 
 export { default as createCompiler } from './create-compiler.mts'

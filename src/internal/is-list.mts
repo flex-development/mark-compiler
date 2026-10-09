@@ -1,9 +1,9 @@
 /**
  * @file Internal - isList
- * @module fsm-compiler/internal/isList
+ * @module mark-compiler/internal/isList
  */
 
-import type { List } from '@flex-development/fsm/core'
+import type { List } from '@flex-development/mark/core'
 
 /**
  * Check if `value` is a list.

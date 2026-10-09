@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - createCompiler
- * @module fsm-compiler/tests/unit/createCompiler
+ * @module mark-compiler/tests/unit/createCompiler
  */
 import boom from '#fixtures/boom'
 import tokens from '#fixtures/tokens'
@@ -12,8 +12,8 @@ import thrower from '#tests/utils/thrower'
 import type {
   FinalizeContext,
   Options
-} from '@flex-development/fsm-compiler'
-import { chars } from '@flex-development/fsm-tokenizer'
+} from '@flex-development/mark-compiler'
+import { chars } from '@flex-development/mark-util-symbol'
 import type {
   Buffer,
   Closer,
@@ -29,17 +29,26 @@ import type {
   TakeExtension,
   Transform,
   Tree
-} from '@flex-development/fsm/ast'
-import type { List } from '@flex-development/fsm/core'
+} from '@flex-development/mark/ast'
+import type { List } from '@flex-development/mark/core'
 import type {
   SliceSerialize,
   Token,
   TokenizeContext
-} from '@flex-development/fsm/parse'
+} from '@flex-development/mark/parse'
 import { pick } from '@flex-development/tutils'
 import { u } from '@flex-development/unist-util-builder'
 import type { Parent } from 'unist'
-import type { Mock } from 'vitest'
+import {
+  afterEach,
+  beforeAll,
+  beforeEach,
+  describe,
+  expect,
+  it,
+  vi,
+  type Mock
+} from 'vitest'
 import testSubject from '../create-compiler.mts'
 
 vi.mock('#internal/error', async og => {

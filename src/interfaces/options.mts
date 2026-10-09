@@ -1,18 +1,18 @@
 /**
  * @file Interfaces - Options
- * @module fsm-compiler/interfaces/Options
+ * @module mark-compiler/interfaces/Options
  */
 
 import type {
   Extensions,
   FinalizeContext
-} from '@flex-development/fsm-compiler'
+} from '@flex-development/mark-compiler'
 import type {
   Preprocess,
   SerializeNode,
   TakeExtension
-} from '@flex-development/fsm/ast'
-import type { Point } from '@flex-development/fsm/parse'
+} from '@flex-development/mark/ast'
+import type { Point } from '@flex-development/mark/parse'
 
 /**
  * Options for configuring an event compiler.

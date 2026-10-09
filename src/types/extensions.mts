@@ -1,10 +1,10 @@
 /**
  * @file Type Aliases - Extensions
- * @module fsm-compiler/types/Extensions
+ * @module mark-compiler/types/Extensions
  */
 
-import type { CreateExtensions, Extension } from '@flex-development/fsm/ast'
-import type { List } from '@flex-development/fsm/core'
+import type { CreateExtensions, Extension } from '@flex-development/mark/ast'
+import type { List } from '@flex-development/mark/core'
 
 /**
  * An extension, a list of extensions, or a factory function.

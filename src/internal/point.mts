@@ -1,9 +1,9 @@
 /**
  * @file Internal - point
- * @module fsm-compiler/internal/point
+ * @module mark-compiler/internal/point
  */
 
-import type { Point } from '@flex-development/fsm/parse'
+import type { Point } from '@flex-development/mark/parse'
 
 /**
  * Copy a point-like value.

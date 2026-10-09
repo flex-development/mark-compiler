@@ -1,19 +1,20 @@
 /**
  * @file Type Tests - Options
- * @module fsm-compiler/interfaces/tests/unit-d/Options
+ * @module mark-compiler/interfaces/tests/unit-d/Options
  */
 
 import type {
   Extensions,
   FinalizeContext
-} from '@flex-development/fsm-compiler'
+} from '@flex-development/mark-compiler'
 import type {
   Preprocess,
   SerializeNode,
   TakeExtension
-} from '@flex-development/fsm/ast'
-import type { Point } from '@flex-development/fsm/parse'
+} from '@flex-development/mark/ast'
+import type { Point } from '@flex-development/mark/parse'
 import type { Nilable } from '@flex-development/tutils'
+import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../options.mts'
 
 describe('unit-d:interfaces/Options', () => {

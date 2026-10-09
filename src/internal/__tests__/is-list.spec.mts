@@ -1,9 +1,10 @@
 /**
  * @file Unit Tests - isList
- * @module fsm-compiler/internal/tests/unit/isList
+ * @module mark-compiler/internal/tests/unit/isList
  */
 
 import testSubject from '#internal/is-list'
+import { describe, expect, it } from 'vitest'
 
 describe('unit:internal/isList', () => {
   it.each<Parameters<typeof testSubject>>([

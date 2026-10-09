@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - error
- * @module fsm-compiler/internal/tests/unit/error
+ * @module mark-compiler/internal/tests/unit/error
  */
 
 import boom from '#fixtures/boom'
@@ -11,10 +11,18 @@ import type {
   CompileContext,
   OnEnterError,
   OnExitError
-} from '@flex-development/fsm/ast'
-import type { Token } from '@flex-development/fsm/parse'
+} from '@flex-development/mark/ast'
+import type { Token } from '@flex-development/mark/parse'
 import { pick } from '@flex-development/tutils'
-import type { Mock } from 'vitest'
+import {
+  beforeAll,
+  beforeEach,
+  describe,
+  expect,
+  it,
+  vi,
+  type Mock
+} from 'vitest'
 
 describe('unit:internal/error', () => {
   type Args = Parameters<typeof testSubject>

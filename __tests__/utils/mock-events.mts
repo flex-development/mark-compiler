@@ -4,8 +4,8 @@
  */
 
 import tt from '#fixtures/tt'
-import { ev } from '@flex-development/fsm-tokenizer'
-import type { Event, TokenizeContext } from '@flex-development/fsm/parse'
+import { ev } from '@flex-development/mark-util-symbol'
+import type { Event, TokenizeContext } from '@flex-development/mark/parse'
 
 export default mockEvents
 

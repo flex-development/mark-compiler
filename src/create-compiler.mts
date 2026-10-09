@@ -1,10 +1,10 @@
 /**
  * @file createCompiler
- * @module fsm-compiler/createCompiler
+ * @module mark-compiler/createCompiler
  */
 
-import type { Extensions, Options } from '@flex-development/fsm-compiler'
-import { chars } from '@flex-development/fsm-tokenizer'
+import type { Extensions, Options } from '@flex-development/mark-compiler'
+import { chars } from '@flex-development/mark-util-symbol'
 import type {
   CompileContext,
   CreateNode,
@@ -17,16 +17,15 @@ import type {
   TakeExtension,
   Transform,
   Tree
-} from '@flex-development/fsm/ast'
-import type { List } from '@flex-development/fsm/core'
+} from '@flex-development/mark/ast'
+import type { List } from '@flex-development/mark/core'
 import type {
   Event,
   Position,
-  Range,
   SerializeOptions,
   Token,
   TokenType
-} from '@flex-development/fsm/parse'
+} from '@flex-development/mark/parse'
 import { u } from '@flex-development/unist-util-builder'
 import {
   stringifyPosition
@@ -428,8 +427,8 @@ function createCompiler(
    *
    * @this {void}
    *
-   * @param {Range} range
-   *  The slice position
+   * @param {Position} range
+   *  The position in stream
    * @param {SerializeOptions | boolean | null | undefined} [options]
    *  Options for serializing or whether to expand tabs
    * @return {string}
@@ -437,7 +436,7 @@ function createCompiler(
    */
   function sliceSerialize(
     this: void,
-    range: Range,
+    range: Position,
     options?: SerializeOptions | boolean | null | undefined
   ): string {
     return void range, void options, chars.empty

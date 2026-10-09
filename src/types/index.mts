@@ -1,6 +1,6 @@
 /**
  * @file Entry Point - Type Aliases
- * @module fsm-compiler/types
+ * @module mark-compiler/types
  */
 
 export type { default as Extensions } from './extensions.mts'

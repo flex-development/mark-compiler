@@ -3,11 +3,9 @@ cefc
 commitlintrc
 dedupe
 devlop
-docast
 fbca
 gpgsign
 hmarr
-htab
 jchen
 kaisugi
 nvmrc

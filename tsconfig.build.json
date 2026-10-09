@@ -3,7 +3,7 @@
     "allowImportingTsExtensions": false,
     "allowJs": false,
     "checkJs": false,
-    "customConditions": ["fsm-compiler"],
+    "customConditions": ["mark-compiler"],
     "declarationMap": false,
     "noEmitOnError": true,
     "outDir": "dist",
@@ -15,8 +15,8 @@
   "exclude": ["**/__mocks__/**", "**/__tests__/**"],
   "extends": "./tsconfig.json",
   "files": [
-    "typings/@flex-development/fsm/ast/index.d.mts",
-    "typings/@flex-development/fsm/parse/index.d.mts",
+    "typings/@flex-development/mark/ast/index.d.mts",
+    "typings/@flex-development/mark/parse/index.d.mts",
     "typings/typescript/lib.es5.d.ts"
   ],
   "include": ["dist/**/*", "src/**/**.mts"]

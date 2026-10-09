@@ -1,5 +1,5 @@
 {
-  "name": "@flex-development/fsm-compiler",
+  "name": "@flex-development/mark-compiler",
   "description": "finite state machine compiler",
   "version": "1.0.0-alpha.4",
   "keywords": [
@@ -12,17 +12,17 @@
     "state"
   ],
   "license": "BSD-3-Clause",
-  "homepage": "https://github.com/flex-development/fsm-compiler",
-  "repository": "https://github.com/flex-development/fsm-compiler.git",
-  "bugs": "https://github.com/flex-development/fsm-compiler/issues",
+  "homepage": "https://github.com/flex-development/mark-compiler",
+  "repository": "https://github.com/flex-development/mark-compiler.git",
+  "bugs": "https://github.com/flex-development/mark-compiler/issues",
   "author": {
     "name": "Lexus Drumgold",
     "url": "https://github.com/unicornware"
   },
   "publishConfig": {
     "access": "public",
-    "diff-dst-prefix": "fsm-compiler",
-    "diff-src-prefix": "fsm-compiler",
+    "diff-dst-prefix": "mark-compiler",
+    "diff-src-prefix": "mark-compiler",
     "directory": "./",
     "executableFiles": [],
     "node-options": null,
@@ -40,7 +40,7 @@
   ],
   "exports": {
     ".": {
-      "fsm-compiler": "./src/index.mts",
+      "mark-compiler": "./src/index.mts",
       "default": "./dist/index.mjs"
     },
     "./package.json": "./package.json"
@@ -48,7 +48,7 @@
   "imports": {
     "#fixtures/*": "./__fixtures__/*.mts",
     "#internal/*": {
-      "fsm-compiler": "./src/internal/*.mts",
+      "mark-compiler": "./src/internal/*.mts",
       "default": "./dist/internal/*.mjs"
     },
     "#tests/*": "./__tests__/*.mts"
@@ -66,7 +66,7 @@
     "check:format": "dprint check --incremental=false",
     "check:lint": "eslint --exit-on-fatal-error --max-warnings 0 .",
     "check:spelling": "cspell lint --color --no-progress --relative $@ \"**\"",
-    "check:types": "tsc -p tsconfig.typecheck.json",
+    "check:types": "tsc -p tsconfig.json",
     "check:types:build": "tsc -p tsconfig.build.json",
     "check:upgrades": "yarn upgrade-interactive",
     "clean:build": "trash \"./{dist,*.tgz}\" || exit 0",
@@ -98,15 +98,16 @@
     "typecheck:ui": "yarn test:ui --typecheck --mode=typecheck"
   },
   "dependencies": {
-    "@flex-development/fsm": "flex-development/fsm#commit=566fbcd8394301afc14115eee8377a560a6f1c84",
-    "@flex-development/fsm-tokenizer": "1.0.0-alpha.9",
+    "@flex-development/mark": "1.0.0-alpha.5",
+    "@flex-development/mark-util-symbol": "3.1.0",
     "@flex-development/unist-util-builder": "2.0.0",
     "@flex-development/unist-util-stringify-position": "1.0.1",
     "devlop": "1.1.0"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "0.18.4",
-    "@commitlint/cli": "21.2.1",
+    "@arethetypeswrong/cli": "0.18.5",
+    "@codecov/rollup-plugin": "2.0.1",
+    "@commitlint/cli": "21.2.3",
     "@commitlint/types": "21.2.0",
     "@edge-runtime/vm": "5.0.0",
     "@flex-development/commitlint-config": "1.0.1",
@@ -128,35 +129,36 @@
     "@types/rollup": "0.54.0",
     "@types/unist": "3.0.3",
     "@vates/toggle-scripts": "1.0.0",
-    "@vitest/coverage-v8": "4.1.10",
-    "@vitest/ui": "4.1.10",
+    "@vitest/coverage-v8": "5.0.3",
+    "@vitest/ui": "5.0.3",
     "concat-stream": "2.0.0",
     "convert-hrtime": "5.0.0",
     "cross-env": "10.1.0",
-    "cspell": "10.0.1",
-    "dprint": "0.55.2",
+    "cspell": "10.3.6",
+    "dprint": "0.61.1",
     "editorconfig": "3.0.2",
-    "eslint": "9.33.0",
+    "eslint": "9.39.5",
     "growl": "1.10.5",
-    "happy-dom": "20.11.1",
+    "happy-dom": "20.14.6",
     "husky": "9.1.7",
     "is-ci": "4.1.0",
     "node-notifier": "10.0.1",
     "pkg-size": "2.4.0",
     "remark": "15.0.1",
     "remark-cli": "12.0.1",
-    "rollup": "4.62.3",
+    "rollup": "4.64.3",
     "rollup-plugin-cleanup": "3.2.1",
-    "rollup-plugin-dts": "6.4.1",
-    "sh-syntax": "0.6.0",
+    "rollup-plugin-dts": "6.5.1",
+    "sh-syntax": "0.7.0",
     "trash-cli": "7.2.0",
     "ts-dedent": "2.3.0",
-    "tsx": "4.23.1",
+    "tsx": "4.23.15",
     "typescript": "6.0.3",
     "unified": "11.0.5",
     "vfile": "6.0.3",
-    "vitest": "4.1.10"
+    "vite": "8.3.4",
+    "vitest": "5.0.3"
   },
-  "packageManager": "yarn@4.14.1",
+  "packageManager": "yarn@4.18.1",
   "sideEffects": false
 }

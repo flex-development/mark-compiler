@@ -1,15 +1,15 @@
 /**
  * @file Internal - error
- * @module fsm-compiler/internal/error
+ * @module mark-compiler/internal/error
  */
 
-import { chars } from '@flex-development/fsm-tokenizer'
+import { chars } from '@flex-development/mark-util-symbol'
 import type {
   CompileContext,
   OnEnterError,
   OnExitError
-} from '@flex-development/fsm/ast'
-import type { Token } from '@flex-development/fsm/parse'
+} from '@flex-development/mark/ast'
+import type { Token } from '@flex-development/mark/parse'
 import {
   stringifyPosition
 } from '@flex-development/unist-util-stringify-position'

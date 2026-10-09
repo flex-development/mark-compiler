@@ -1,6 +1,0 @@
-{
-  "compilerOptions": {
-    "customConditions": ["fsm-compiler", "development", "node"]
-  },
-  "extends": "./tsconfig.json"
-}

@@ -6,14 +6,6 @@
 export default plugin
 
 /**
- * A list.
- *
- * @template {any} [T=unknown]
- *  List item type
- */
-type List<T = unknown> = ReadonlySet<T> | readonly T[]
-
-/**
  * Chai plugin to allow for assertions on each item in a list.
  *
  * @see {@linkcode Chai.ChaiStatic}
@@ -65,10 +57,18 @@ function plugin(chai: Chai.ChaiStatic, utils: Chai.ChaiUtils): undefined {
    *
    * @param {unknown} thing
    *  The value to check
-   * @return {List}
+   * @return {thing is List}
    *  `true` if `thing` is an array or set
    */
   function list(this: void, thing: unknown): thing is List {
     return Array.isArray(thing) || thing instanceof Set
   }
 }
+
+/**
+ * A list.
+ *
+ * @template {any} [T=unknown]
+ *  List item type
+ */
+type List<T = unknown> = ReadonlySet<T> | readonly T[]

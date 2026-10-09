@@ -1,18 +1,19 @@
 /**
  * @file Unit Tests - positionTree
- * @module fsm-compiler/internal/tests/unit/positionTree
+ * @module mark-compiler/internal/tests/unit/positionTree
  */
 
 import tokens from '#fixtures/tokens'
 import testSubject from '#internal/position-tree'
-import { ev } from '@flex-development/fsm-tokenizer'
-import type { Tree } from '@flex-development/fsm/ast'
-import type { Token } from '@flex-development/fsm/parse'
+import { ev } from '@flex-development/mark-util-symbol'
+import type { Tree } from '@flex-development/mark/ast'
+import type { Token } from '@flex-development/mark/parse'
 import { u } from '@flex-development/unist-util-builder'
 import type { Position } from 'unist'
+import { beforeAll, describe, expect, it } from 'vitest'
 
 describe('unit:internal/positionTree', () => {
-  let events: [[ev.enter, Token], [ev.exit, Token]]
+  let events: [[typeof ev.enter, Token], [typeof ev.exit, Token]]
   let token: Token
 
   beforeAll(() => {

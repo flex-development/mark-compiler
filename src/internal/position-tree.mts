@@ -1,10 +1,10 @@
 /**
  * @file Internal - positionTree
- * @module fsm-compiler/internal/positionTree
+ * @module mark-compiler/internal/positionTree
  */
 
-import type { Tree } from '@flex-development/fsm/ast'
-import type { Position, Token } from '@flex-development/fsm/parse'
+import type { Tree } from '@flex-development/mark/ast'
+import type { Position, Token } from '@flex-development/mark/parse'
 import point from './point.mts'
 
 /**

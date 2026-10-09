@@ -3,7 +3,7 @@
     "allowImportingTsExtensions": true,
     "allowJs": true,
     "alwaysStrict": true,
-    "customConditions": ["fsm-compiler", "development"],
+    "customConditions": ["mark-compiler", "development"],
     "declaration": true,
     "declarationMap": true,
     "lib": ["es2024", "dom"],

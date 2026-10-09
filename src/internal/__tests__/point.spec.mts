@@ -1,9 +1,10 @@
 /**
  * @file Unit Tests - point
- * @module fsm-compiler/internal/tests/unit/point
+ * @module mark-compiler/internal/tests/unit/point
  */
 
 import testSubject from '#internal/point'
+import { describe, expect, it } from 'vitest'
 
 describe('unit:internal/point', () => {
   it.each<Parameters<typeof testSubject>>([

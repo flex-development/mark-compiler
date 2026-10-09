@@ -1,10 +1,10 @@
 /**
  * @file Type Aliases - FinalizeContext
- * @module fsm-compiler/types/FinalizeContext
+ * @module mark-compiler/types/FinalizeContext
  */
 
-import type { Options } from '@flex-development/fsm-compiler'
-import type { CompileContext } from '@flex-development/fsm/ast'
+import type { Options } from '@flex-development/mark-compiler'
+import type { CompileContext } from '@flex-development/mark/ast'
 
 /**
  * Finalize the compilation context.
