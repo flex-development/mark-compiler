@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/mark-compiler",
   "description": "finite state machine compiler",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "keywords": [
     "compile",
     "compiler",

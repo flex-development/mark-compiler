@@ -1,3 +1,25 @@
+## [1.0.0-alpha.6](https://github.com/flex-development/mark-compiler/compare/1.0.0-alpha.5...1.0.0-alpha.6) (2026-10-09)
+
+### :package: Build
+
+- [[`c62e7de`](https://github.com/flex-development/mark-compiler/commit/c62e7de51398e4cfa05a4495682cd5afb3f5499a)] **deps:** bump @flex-development/mark from 1.0.0-alpha.5 to 1.0.0-alpha.6
+- [[`bc5b0db`](https://github.com/flex-development/mark-compiler/commit/bc5b0db37a1d241457e517902ee69a45303bcf32)] **deps:** Bump browserslist from 4.28.2 to 4.29.3 ([#55](https://github.com/flex-development/mark-compiler/issues/55))
+- [[`a409224`](https://github.com/flex-development/mark-compiler/commit/a409224e55be1ae8552fffcb98d31795bb3c33af)] **deps:** Bump fast-uri from 3.1.2 to 3.1.8 ([#52](https://github.com/flex-development/mark-compiler/issues/52))
+- [[`8a93157`](https://github.com/flex-development/mark-compiler/commit/8a93157e3dc1387a0df8adaeb8c27962d00350ed)] **deps:** Bump tar from 7.5.16 to 7.5.22 ([#53](https://github.com/flex-development/mark-compiler/issues/53))
+
+### :robot: Continuous Integration
+
+- [[`1f0c740`](https://github.com/flex-development/mark-compiler/commit/1f0c740fe9905b7345d95aefe8cad0500b00881b)] **deps:** Bump codecov/codecov-action from 7.0.0 to 7.1.1 ([#51](https://github.com/flex-development/mark-compiler/issues/51))
+- [[`fe2b7aa`](https://github.com/flex-development/mark-compiler/commit/fe2b7aa04809119d5e45690ae5532cf8ce1ca2dc)] **deps:** Bump dprint/check from 2.3 to 2.5 ([#49](https://github.com/flex-development/mark-compiler/issues/49))
+
+### :bug: Fixes
+
+- [[`499835e`](https://github.com/flex-development/mark-compiler/commit/499835e60f6f53924abafa24168f1c0054269cbc)] `sliceSerialize` assignment
+
+### :house_with_garden: Housekeeping
+
+- [[`d72c854`](https://github.com/flex-development/mark-compiler/commit/d72c854d53bb217df17a1377b9c57f41a33e2e9e)] **github:** [dependabot] add `mark` group
+
 ## [1.0.0-alpha.5](https://github.com/flex-development/mark-compiler/compare/1.0.0-alpha.4...1.0.0-alpha.5) (2026-10-09)
 
 ### ⚠ BREAKING CHANGES
@@ -84,6 +106,7 @@
 ### :house_with_garden: Housekeeping
 
 - [[`1dbbbdb`](https://github.com/flex-development/mark-compiler/commit/1dbbbdb4197bbf31530d57e3a8c67d9958deb543)] initial commit
+
 
 
 
