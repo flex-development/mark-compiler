@@ -7,6 +7,7 @@ import type { Extensions, Options } from '@flex-development/mark-compiler'
 import { chars } from '@flex-development/mark-util-symbol'
 import type {
   CompileContext,
+  Context,
   CreateNode,
   Extension,
   Handle,
@@ -18,7 +19,7 @@ import type {
   Transform,
   Tree
 } from '@flex-development/mark/ast'
-import type { List } from '@flex-development/mark/core'
+import type { IfNever, List } from '@flex-development/mark/core'
 import type {
   Event,
   Position,
@@ -42,19 +43,21 @@ export default createCompiler
  * Create an event compiler.
  *
  * @see {@linkcode CompileContext}
+ * @see {@linkcode Context}
+ * @see {@linkcode IfNever}
  * @see {@linkcode Options}
  *
  * @this {void}
  *
  * @param {Options | null | undefined} [options]
  *  Options for creating the compiler
- * @return {CompileContext}
+ * @return {IfNever<Context, CompileContext, Context>}
  *  The event compilation context
  */
 function createCompiler(
   this: void,
   options?: Options | null | undefined
-): CompileContext {
+): IfNever<Context, CompileContext, Context> {
   options ??= {}
 
   /**

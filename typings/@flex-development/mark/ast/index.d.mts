@@ -1,8 +1,12 @@
-import type { Root } from '@flex-development/mark/ast'
+import type { CompileContext, Root } from '@flex-development/mark/ast'
 import type {} from '@flex-development/mark/ast/compile'
 import type unist from 'unist'
 
 declare module '@flex-development/mark/ast' {
+  interface ContextMap {
+    mark: CompileContext
+  }
+
   interface Extension {
     canContainEols?: string[] | null | undefined
   }

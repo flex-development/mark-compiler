@@ -4,7 +4,7 @@
  */
 
 import type { Options } from '@flex-development/mark-compiler'
-import type { CompileContext } from '@flex-development/mark/ast'
+import type { Context } from '@flex-development/mark/ast'
 import { describe, expectTypeOf, it } from 'vitest'
 import type TestSubject from '../finalize-context.mts'
 
@@ -14,10 +14,10 @@ describe('unit-d:types/FinalizeContext', () => {
   })
 
   describe('parameters', () => {
-    it('should be callable with [CompileContext, Options]', () => {
+    it('should be callable with [Context, Options]', () => {
       expectTypeOf<TestSubject>()
         .parameters
-        .toEqualTypeOf<[CompileContext, Options]>()
+        .toEqualTypeOf<[Context, Options]>()
     })
   })
 

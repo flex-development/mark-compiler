@@ -4,25 +4,25 @@
  */
 
 import type { Options } from '@flex-development/mark-compiler'
-import type { CompileContext } from '@flex-development/mark/ast'
+import type { Context } from '@flex-development/mark/ast'
 
 /**
  * Finalize the compilation context.
  *
- * @see {@linkcode CompileContext}
+ * @see {@linkcode Context}
  * @see {@linkcode Options}
  *
  * @this {void}
  *
- * @param {CompileContext} context
- *  The current compile context
+ * @param {Context} context
+ *  The current compilation context
  * @param {Options} options
  *  The options used to create the compiler
  * @return {null | undefined}
  */
 type FinalizeContext = (
   this: void,
-  context: CompileContext,
+  context: Context,
   options: Options
 ) => null | undefined
 
