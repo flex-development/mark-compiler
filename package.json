@@ -98,7 +98,7 @@
     "typecheck:ui": "yarn test:ui --typecheck --mode=typecheck"
   },
   "dependencies": {
-    "@flex-development/mark": "1.0.0-alpha.5",
+    "@flex-development/mark": "1.0.0-alpha.6",
     "@flex-development/mark-util-symbol": "3.1.0",
     "@flex-development/unist-util-builder": "2.0.0",
     "@flex-development/unist-util-stringify-position": "1.0.1",

@@ -208,7 +208,7 @@ describe('unit:createCompiler', () => {
            *  Create an exit handle
            * @param {Buffer} buffer
            *  Capture some of the output data
-           * @return {[Extension]}
+           * @return {[Extension, [Extension]]}
            *  The extension
            */
           extensions(
@@ -216,7 +216,7 @@ describe('unit:createCompiler', () => {
             opener: Opener,
             closer: Closer,
             buffer: Buffer
-          ): [Extension] {
+          ): [Extension, [Extension]] {
             expect(buffer).to.be.a('function').with.property('name', 'buffer')
             expect(closer).to.be.a('function').with.property('name', 'closer')
             expect(opener).to.be.a('function').with.property('name', 'opener')
@@ -240,9 +240,13 @@ describe('unit:createCompiler', () => {
                 exit: {
                   [tt.bracketExpression]: closer(),
                   [tt.literal]: closer()
-                },
-                transforms: [transform1, transform2, transform3]
-              }
+                }
+              },
+              [
+                {
+                  transforms: [transform1, transform2, transform3]
+                }
+              ]
             ]
           },
 

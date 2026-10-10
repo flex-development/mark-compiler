@@ -17,7 +17,9 @@ describe('unit-d:types/Extensions', () => {
     expectTypeOf<TestSubject>().extract<Extension>().not.toBeNever()
   })
 
-  it('should allow List<Extension>', () => {
-    expectTypeOf<TestSubject>().extract<List<Extension>>().not.toBeNever()
+  it('should allow List<Extension | List<Extension>>', () => {
+    expectTypeOf<TestSubject>()
+      .extract<List<Extension | List<Extension>>>()
+      .not.toBeNever()
   })
 })

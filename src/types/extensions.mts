@@ -13,6 +13,9 @@ import type { List } from '@flex-development/mark/core'
  * @see {@linkcode Extension}
  * @see {@linkcode List}
  */
-type Extensions = CreateExtensions | Extension | List<Extension>
+type Extensions =
+  | CreateExtensions
+  | Extension
+  | List<Extension | List<Extension>>
 
 export type { Extensions as default }

@@ -447,15 +447,15 @@ function createCompiler(
    *
    * @this {void}
    *
-   * @param {ReadonlyArray<Extension>} extensions
-   *  The list of extensions to merge
+   * @param {ReadonlyArray<Extension | List<Extension>>} extensions
+   *  The extensions to merge
    * @param {TakeExtension | null | undefined} [take]
    *  Merge additional extension fields into the compiler configuration
    * @return {undefined}
    */
   function takeExtensions(
     this: void,
-    extensions: readonly Extension[],
+    extensions: readonly (Extension | List<Extension>)[],
     take?: TakeExtension | null | undefined
   ): undefined {
     /**
@@ -467,12 +467,20 @@ function createCompiler(
 
     // combine extensions.
     while (++index < extensions.length) {
+      ok(extensions[index], 'expected `extensions[index]`')
+
       /**
-       * The current extension.
+       * The current extension or list of extensions.
        *
-       * @const {Extension | undefined} value
+       * @const {Extension | List<Extension>} value
        */
-      const extension: Extension | undefined = extensions[index]
+      const extension: Extension | List<Extension> = extensions[index]!
+
+      // merge sublist.
+      if (isList(extension)) {
+        takeExtensions([...extension], take)
+        continue
+      }
 
       /**
        * The current {@linkcode extension} field.
