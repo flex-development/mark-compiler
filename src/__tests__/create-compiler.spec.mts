@@ -297,10 +297,6 @@ describe('unit:createCompiler', () => {
         expect(preprocess).toHaveBeenCalledBefore(bracketExpression)
         expect(preprocess).toHaveBeenCalledBefore(text)
       })
-
-      it('should use custom serializer', () => {
-        expect(subject.sliceSerialize).not.to.eq(tokenizer.sliceSerialize)
-      })
     })
   })
 

@@ -180,8 +180,7 @@ function createCompiler(
       const [event, token, { sliceSerialize }] = events[index]!
 
       // use serializer from tokenizer.
-      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-      context.sliceSerialize ??= sliceSerialize
+      context.sliceSerialize = sliceSerialize
 
       // call token handler.
       context.config[event][token.type]?.call(context, token)
