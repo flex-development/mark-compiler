@@ -1,3 +1,13 @@
+## [1.0.0-alpha.7](https://github.com/flex-development/mark-compiler/compare/1.0.0-alpha.6...1.0.0-alpha.7) (2026-10-10)
+
+### :package: Build
+
+- [[`b8bc322`](https://github.com/flex-development/mark-compiler/commit/b8bc322262978780b32c94ef92b4993fe0e0182e)] **deps-dev:** Bump @commitlint/types from 21.2.0 to 21.2.3 in the commitlint group across 1 directory ([#61](https://github.com/flex-development/mark-compiler/issues/61))
+
+### :sparkles: Features
+
+- [[`5954f43`](https://github.com/flex-development/mark-compiler/commit/5954f436a2013900767502ebf1910ba9074a737e)] `ContextMap` support
+
 ## [1.0.0-alpha.6](https://github.com/flex-development/mark-compiler/compare/1.0.0-alpha.5...1.0.0-alpha.6) (2026-10-09)
 
 ### :package: Build
@@ -106,6 +116,7 @@
 ### :house_with_garden: Housekeeping
 
 - [[`1dbbbdb`](https://github.com/flex-development/mark-compiler/commit/1dbbbdb4197bbf31530d57e3a8c67d9958deb543)] initial commit
+
 
 
 
